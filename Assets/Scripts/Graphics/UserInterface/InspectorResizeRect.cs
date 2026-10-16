@@ -24,12 +24,12 @@ namespace Kralt.Editor.Graphics.UserInterface
         
         void Update()
         {
-            if(mouseOver && KInput.LmbDown) isDragging = true;
-            if(KInput.LmbUp) isDragging = false;
+            if(mouseOver && KraltInput.LmbDown) isDragging = true;
+            if(KraltInput.LmbUp) isDragging = false;
 
             if (isDragging)
             {
-                float left = KInput.MousePosition.x / Screen.width * 1920f;
+                float left = KraltInput.MousePosition.x / Screen.width * 1920f;
                 left = Mathf.Clamp(left, inpsectorWidthMin, inspectorWidthMax);
                 float right = Mathf.Abs(1920f - left);
                 
